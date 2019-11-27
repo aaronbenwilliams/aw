@@ -1,0 +1,12 @@
+//main.scss
+
+$primary-color: #6c63ff;
+$font: 'lato';
+
+body{
+  background: $primary-color;
+  font-family: $font;
+  p{
+    color: #ffffff;
+  }
+}
