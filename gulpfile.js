@@ -44,4 +44,9 @@ gulp.task('fonts', function(){
          .pipe(gulp.dest('dist'))
 });
 
-gulp.task('build', gulp.series('useref', 'fonts'));
+gulp.task('images', function(){
+   return gulp.src('src/img/**/*')
+         .pipe(gulp.dest('dist/img'))
+});
+
+gulp.task('build', gulp.series('useref', 'fonts', 'images'));

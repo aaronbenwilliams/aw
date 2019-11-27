@@ -1,10 +1,13 @@
+@import 'layout';
+
 //main.scss
 
 $primary-color: #6c63ff;
 $font: 'lato';
 
 body{
-  background: $primary-color;
+  margin: 0;
+  background: white;
   font-family: $font;
   p{
     color: #ffffff;

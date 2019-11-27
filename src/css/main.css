@@ -1,5 +1,18 @@
+main {
+  display: inline-block;
+  width: 50%; }
+
+#strip-middle {
+  display: inline-block;
+  width: 30%; }
+
+#strip-right {
+  display: inline-block;
+  width: 20%; }
+
 body {
-  background: #6c63ff;
+  margin: 0;
+  background: white;
   font-family: "lato"; }
   body p {
     color: #ffffff; }
