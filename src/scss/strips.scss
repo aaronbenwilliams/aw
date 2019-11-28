@@ -1,0 +1,30 @@
+// Shared styling
+
+aside {
+  background: rgb(115,23,147);
+  background: linear-gradient(120deg, rgba(115,23,147,1) 0%, rgba(244,77,106,1) 100%);
+
+  p {
+    color: white;
+    padding: 40px 30px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+// Middle strip styling
+
+#strip-middle {
+}
+
+
+// Right strip styling
+
+#strip-right {
+  p {
+    color: white;
+    padding: 30px 20px;
+  }
+}

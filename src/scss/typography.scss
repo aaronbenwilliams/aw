@@ -1,0 +1,32 @@
+// Typography
+
+@font-face {
+    font-family: 'pier_sansbold';
+    src: url('/fonts/piersans-bold.woff2') format('woff2'),
+         url('/fonts/piersans-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pier_sansregular';
+    src: url('/fonts/piersans-regular.woff2') format('woff2'),
+         url('/fonts/piersans-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$font: 'pier_sansregular';
+$font-bold: 'pier_sansbold';
+
+body {
+  font-family: $font;
+}
+
+a {
+  transition: 0.3s;
+
+  &:hover {
+
+  }
+}

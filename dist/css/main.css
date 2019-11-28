@@ -1,0 +1,30 @@
+main {
+  display: inline-block;
+  width: 50%; }
+
+#strip-middle {
+  display: inline-block;
+  width: 30%; }
+
+#strip-right {
+  display: inline-block;
+  width: 20%; }
+
+@font-face {
+  font-family: 'pier_sansbold';
+  src: url("piersans-bold.woff2") format("woff2"), url("piersans-bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'pier_sansregular';
+  src: url("piersans-regular.woff2") format("woff2"), url("piersans-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  margin: 0;
+  background: white;
+  font-family: "lato"; }
+  body p {
+    color: #ffffff; }

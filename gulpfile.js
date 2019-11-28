@@ -41,7 +41,7 @@ gulp.task('useref', function () {
 
 gulp.task('fonts', function(){
    return gulp.src('src/fonts/**/*')
-         .pipe(gulp.dest('dist'))
+         .pipe(gulp.dest('dist/fonts'))
 });
 
 gulp.task('images', function(){
@@ -49,4 +49,9 @@ gulp.task('images', function(){
          .pipe(gulp.dest('dist/img'))
 });
 
-gulp.task('build', gulp.series('useref', 'fonts', 'images'));
+gulp.task('stylesheets', function(){
+   return gulp.src('src/css/**/*')
+         .pipe(gulp.dest('dist/css'))
+});
+
+gulp.task('build', gulp.series('useref', 'fonts', 'images', 'stylesheets'));

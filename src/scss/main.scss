@@ -1,15 +1,29 @@
+// Imports
+
+@import 'vars';
+@import 'basics';
 @import 'layout';
+@import 'typography';
+@import 'nav';
+@import 'footer';
+@import 'strips';
 
-//main.scss
+main {
 
-$primary-color: #6c63ff;
-$font: 'lato';
+  .logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
 
-body{
-  margin: 0;
-  background: white;
-  font-family: $font;
-  p{
-    color: #ffffff;
+  h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 27px;
+    line-height: 35px;
+    font-family: $font-bold;
+    transform: translate(0, -50%);
   }
 }

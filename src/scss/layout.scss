@@ -1,14 +1,19 @@
+// Layout
+
 main {
   display: inline-block;
   width: 50%;
+  position: relative;
 }
 
 #strip-middle {
   display: inline-block;
   width: 30%;
+  position: relative;
 }
 
 #strip-right {
   display: inline-block;
   width: 20%;
+  position: relative;
 }
