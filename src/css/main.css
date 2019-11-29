@@ -106,19 +106,21 @@ footer span {
   font-size: 12px;
   color: white; }
 
-aside {
+aside p {
   background: #731793;
   background: linear-gradient(120deg, #731793 0%, #f44d6a 100%);
-  display: -webkit-box;
-  display: flex; }
-  aside p {
-    color: white;
-    padding: 40px 30px; }
-  aside img {
-    width: auto; }
+  color: white;
+  padding: 40px 30px; }
 
-#strip-middle img {
-  height: 75%; }
+aside img {
+  width: auto; }
+
+#strip-middle {
+  height: 100%;
+  background: url("/img/aaron.jpg") no-repeat; }
+  #strip-middle p {
+    position: absolute;
+    bottom: 0; }
 
 #strip-right p {
   color: white;
