@@ -3,6 +3,7 @@
 aside {
   background: rgb(115,23,147);
   background: linear-gradient(120deg, rgba(115,23,147,1) 0%, rgba(244,77,106,1) 100%);
+  display: flex;
 
   p {
     color: white;
@@ -10,13 +11,16 @@ aside {
   }
 
   img {
-    width: 100%;
+    width: auto;
   }
 }
 
 // Middle strip styling
 
 #strip-middle {
+  img {
+    height: 75%;
+  }
 }
 
 

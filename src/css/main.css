@@ -108,12 +108,17 @@ footer span {
 
 aside {
   background: #731793;
-  background: linear-gradient(120deg, #731793 0%, #f44d6a 100%); }
+  background: linear-gradient(120deg, #731793 0%, #f44d6a 100%);
+  display: -webkit-box;
+  display: flex; }
   aside p {
     color: white;
     padding: 40px 30px; }
   aside img {
-    width: 100%; }
+    width: auto; }
+
+#strip-middle img {
+  height: 75%; }
 
 #strip-right p {
   color: white;
