@@ -17,3 +17,13 @@ ul {
   padding: 0;
   list-style: none;
 }
+
+::-moz-selection {
+  color: white;
+  background: black;
+}
+
+::selection {
+  color: white;
+  background: black;
+}

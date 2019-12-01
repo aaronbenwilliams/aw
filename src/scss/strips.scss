@@ -1,11 +1,38 @@
 // Shared styling
 
 aside {
-  p {
+  height: 100%;
+
+  span {
     background: rgb(115,23,147);
     background: linear-gradient(120deg, rgba(115,23,147,1) 0%, rgba(244,77,106,1) 100%);
-    color: white;
     padding: 40px 30px;
+  }
+
+  p {
+    color: white;
+    font-size: 18px;
+    line-height: 27px;
+    margin: 0;
+  }
+
+  a {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: $font-bold;
+    background: white;
+    padding: 8px 15px;
+    color: $pink;
+    margin: 20px 0 30px;
+    border: 2px solid rgba(255,255,255,0);
+
+    &:hover {
+      background: none;
+      border: 2px solid rgba(255,255,255,1);
+      color: white;
+    }
   }
 
   img {
@@ -16,10 +43,10 @@ aside {
 // Middle strip styling
 
 #strip-middle {
-  height: 100%;
   background: url('/img/aaron.jpg') no-repeat;
+  background-size: cover;
 
-  p {
+  span {
     position: absolute;
     bottom: 0;
   }
@@ -29,8 +56,11 @@ aside {
 // Right strip styling
 
 #strip-right {
-  p {
-    color: white;
+  background: url('/img/drupalcon.jpg') no-repeat;
+  background-size: cover;
+
+  span {
+    position: absolute;
     padding: 30px 20px;
   }
 }

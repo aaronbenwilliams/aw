@@ -14,6 +14,14 @@ ul {
   padding: 0;
   list-style: none; }
 
+::-moz-selection {
+  color: white;
+  background: black; }
+
+::selection {
+  color: white;
+  background: black; }
+
 main {
   display: inline-block;
   width: 50%;
@@ -28,6 +36,20 @@ main {
   display: inline-block;
   width: 20%;
   position: relative; }
+
+@media only screen and (max-width: 1000px) {
+  #strip-right {
+    display: none; }
+  #strip-middle {
+    width: 40%; }
+  main {
+    width: 60%; } }
+
+@media only screen and (max-width: 600px) {
+  #strip-middle {
+    display: none; }
+  main {
+    width: 100%; } }
 
 @font-face {
   font-family: 'pier_sansbold';
@@ -51,7 +73,8 @@ a {
 nav {
   position: absolute;
   right: 30px;
-  top: 50px; }
+  top: 50px;
+  z-index: 2; }
   nav ul li {
     display: inline-block;
     padding-right: 20px; }
@@ -83,6 +106,14 @@ nav {
         -webkit-transform: scaleX(1);
                 transform: scaleX(1); }
 
+@media only screen and (max-width: 1000px) {
+  nav {
+    top: 30px; }
+    nav ul li {
+      display: block;
+      padding-right: 0;
+      padding-bottom: 10px; } }
+
 footer ul {
   position: absolute;
   bottom: 30px;
@@ -97,6 +128,8 @@ footer ul {
       text-transform: uppercase;
       font-size: 12px;
       color: #1d1d1d; }
+      footer ul li a:hover {
+        color: #902389; }
 
 footer span {
   position: absolute;
@@ -106,30 +139,66 @@ footer span {
   font-size: 12px;
   color: white; }
 
-aside p {
-  background: #731793;
-  background: linear-gradient(120deg, #731793 0%, #f44d6a 100%);
-  color: white;
-  padding: 40px 30px; }
-
-aside img {
-  width: auto; }
+aside {
+  height: 100%; }
+  aside span {
+    background: #731793;
+    background: linear-gradient(120deg, #731793 0%, #f44d6a 100%);
+    padding: 40px 30px; }
+  aside p {
+    color: white;
+    font-size: 18px;
+    line-height: 27px;
+    margin: 0; }
+  aside a {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "pier_sansbold";
+    background: white;
+    padding: 8px 15px;
+    color: #902389;
+    margin: 20px 0 30px;
+    border: 2px solid rgba(255, 255, 255, 0); }
+    aside a:hover {
+      background: none;
+      border: 2px solid white;
+      color: white; }
+  aside img {
+    width: auto; }
 
 #strip-middle {
-  height: 100%;
-  background: url("/img/aaron.jpg") no-repeat; }
-  #strip-middle p {
+  background: url("/img/aaron.jpg") no-repeat;
+  background-size: cover; }
+  #strip-middle span {
     position: absolute;
     bottom: 0; }
 
-#strip-right p {
-  color: white;
-  padding: 30px 20px; }
+#strip-right {
+  background: url("/img/drupalcon.jpg") no-repeat;
+  background-size: cover; }
+  #strip-right span {
+    position: absolute;
+    padding: 30px 20px; }
+
+main::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 300px;
+  z-index: 1;
+  background: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(30%, white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(180deg, white 0%, white 30%, rgba(255, 255, 255, 0) 100%); }
 
 main .logo {
   position: absolute;
   top: 30px;
-  left: 30px; }
+  left: 30px;
+  z-index: 2; }
 
 main h1 {
   margin: 0;
@@ -140,4 +209,15 @@ main h1 {
   line-height: 35px;
   font-family: "pier_sansbold";
   -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%); }
+          transform: translate(0, -50%);
+  padding-right: 30px; }
+
+@media only screen and (max-width: 1000px) {
+  main::after {
+    height: 400px; }
+  main .logo {
+    height: 24px;
+    width: 51px; }
+    main .logo img {
+      height: 100%;
+      width: 100%; } }

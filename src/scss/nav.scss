@@ -4,6 +4,7 @@ nav {
   position: absolute;
   right: 30px;
   top: 50px;
+  z-index: 2;
 
   ul {
     li {
@@ -39,6 +40,19 @@ nav {
       		visibility: visible;
       		transform: scaleX(1);
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  nav {
+    top: 30px;
+    ul {
+      li {
+        display: block;
+        padding-right: 0;
+        padding-bottom: 10px;
       }
     }
   }
