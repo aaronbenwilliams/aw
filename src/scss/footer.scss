@@ -37,3 +37,16 @@ footer {
     color: white;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  footer {
+    ul li {
+      padding-right: 10px;
+    }
+
+    span {
+      color: black;
+      font-size: 10px;
+    }
+  }
+}

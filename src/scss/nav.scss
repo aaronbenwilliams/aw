@@ -40,6 +40,12 @@ nav {
       		visibility: visible;
       		transform: scaleX(1);
         }
+
+        &.active {
+          background: linear-gradient(90deg, rgba(115,23,147,1) 0%, rgba(244,77,106,1) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
       }
     }
   }
