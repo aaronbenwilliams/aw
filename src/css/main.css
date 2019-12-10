@@ -37,16 +37,25 @@ main {
   width: 20%;
   position: relative; }
 
+#strip-double {
+  display: inline-block;
+  width: 50%;
+  position: relative; }
+
 @media only screen and (max-width: 1000px) {
   #strip-right {
     display: none; }
   #strip-middle {
+    width: 40%; }
+  #strip-double {
     width: 40%; }
   main {
     width: 60%; } }
 
 @media only screen and (max-width: 600px) {
   #strip-middle {
+    display: none; }
+  #strip-double {
     display: none; }
   main {
     width: 100%; } }
@@ -120,7 +129,7 @@ nav {
       padding-bottom: 10px; } }
 
 footer ul {
-  position: absolute;
+  position: fixed;
   bottom: 30px;
   left: 30px; }
   footer ul li {
@@ -137,7 +146,7 @@ footer ul {
         color: #902389; }
 
 footer span {
-  position: absolute;
+  position: fixed;
   right: 30px;
   bottom: 30px;
   font-family: "pier_sansbold";
@@ -193,6 +202,56 @@ aside {
   #strip-right span {
     position: absolute;
     padding: 30px 20px; }
+
+/* Masonry grid */
+.masonry {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  -webkit-column-fill: initial;
+     -moz-column-fill: initial;
+          column-fill: initial; }
+
+/* Masonry item */
+.masonry .brick {
+  margin-bottom: 30px;
+  display: inline-block;
+  /* Fix the misalignment of items */
+  vertical-align: top;
+  /* Keep the item on the very top */ }
+
+.masonry .brick img {
+  max-width: 100%;
+  vertical-align: middle; }
+
+/* Gutterless masonry */
+.masonry.gutterless {
+  -webkit-column-gap: 0;
+     -moz-column-gap: 0;
+          column-gap: 0; }
+
+.masonry.gutterless .brick {
+  margin-bottom: 0; }
+
+/* Masonry on tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .masonry {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2; } }
+
+/* Masonry on big screens */
+@media only screen and (min-width: 1024px) {
+  .desc {
+    font-size: 1.25em; }
+  .intro {
+    letter-spacing: 1px; }
+  .masonry {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3; } }
 
 main::after {
   content: "";

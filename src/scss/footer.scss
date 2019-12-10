@@ -3,7 +3,7 @@
 footer {
 
   ul {
-    position: absolute;
+    position: fixed;
     bottom: 30px;
     left: 30px;
 
@@ -29,7 +29,7 @@ footer {
   }
 
   span {
-    position: absolute;
+    position: fixed;
     right: 30px;
     bottom: 30px;
     font-family: $font-bold;
