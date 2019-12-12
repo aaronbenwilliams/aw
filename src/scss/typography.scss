@@ -32,8 +32,48 @@ a {
 }
 
 p {
-  font-size: 16px;
-  line-height: 28px;
-  margin-bottom: 50px;
-  padding-right: 60px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 30px;
+  max-width: 612px;
+  margin-bottom: 30px;
+  padding-right: 30px;
+
+  a {
+    background: linear-gradient(90deg, rgba(115,23,147,1) 0%, rgba(244,77,106,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary-color;
+    }
+
+    &:before, &:after {
+      content: '';
+      background: $primary-color;
+      position: absolute;
+      width: 0;
+      height: 2px;
+      -webkit-transition: all .3s linear;
+      -moz-transition: all .3s linear;
+      transition: all .3s linear;
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+    }
+
+    &:after {
+      top: 100%;
+      right: 0;
+    }
+
+    &:hover:before, &:hover:after {
+      width: 100%;
+    }
+  }
 }

@@ -2,25 +2,25 @@
 
 main {
   display: inline-block;
-  width: 50%;
+  width: 65%;
   position: relative;
 }
 
 #strip-middle {
   display: inline-block;
-  width: 30%;
+  width: 20%;
   position: relative;
 }
 
 #strip-right {
   display: inline-block;
-  width: 20%;
+  width: 15%;
   position: relative;
 }
 
 #strip-double {
   display: inline-block;
-  width: 50%;
+  width: 35%;
   position: relative;
 }
 
@@ -30,15 +30,15 @@ main {
   }
 
   #strip-middle {
-    width: 40%;
+    width: 30%;
   }
 
   #strip-double {
-    width: 40%;
+    width: 30%;
   }
 
   main {
-    width: 60%;
+    width: 70%;
   }
 }
 
