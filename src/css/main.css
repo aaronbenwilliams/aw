@@ -79,6 +79,12 @@ a {
   -webkit-transition: 0.3s;
   transition: 0.3s; }
 
+p {
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 50px;
+  padding-right: 60px; }
+
 nav {
   position: absolute;
   right: 30px;
@@ -130,8 +136,10 @@ nav {
 
 footer ul {
   position: fixed;
-  bottom: 30px;
-  left: 30px; }
+  bottom: 0;
+  left: 20px;
+  background: white;
+  padding: 10px 10px 30px; }
   footer ul li {
     display: inline-block;
     padding-right: 20px; }
@@ -203,8 +211,7 @@ aside {
     position: absolute;
     padding: 30px 20px; }
 
-/* Masonry grid */
-.masonry {
+#strip-double .masonry {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
   -webkit-column-gap: 30px;
@@ -213,27 +220,20 @@ aside {
   -webkit-column-fill: initial;
      -moz-column-fill: initial;
           column-fill: initial; }
+  #strip-double .masonry .brick {
+    margin-bottom: 30px;
+    display: inline-block;
+    vertical-align: top; }
+    #strip-double .masonry .brick img {
+      max-width: 100%;
+      vertical-align: middle; }
 
-/* Masonry item */
-.masonry .brick {
-  margin-bottom: 30px;
-  display: inline-block;
-  /* Fix the misalignment of items */
-  vertical-align: top;
-  /* Keep the item on the very top */ }
-
-.masonry .brick img {
-  max-width: 100%;
-  vertical-align: middle; }
-
-/* Gutterless masonry */
-.masonry.gutterless {
+#strip-double .masonry.gutterless {
   -webkit-column-gap: 0;
      -moz-column-gap: 0;
           column-gap: 0; }
-
-.masonry.gutterless .brick {
-  margin-bottom: 0; }
+  #strip-double .masonry.gutterless .brick {
+    margin-bottom: 0; }
 
 /* Masonry on tablets */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -282,6 +282,16 @@ main h1 {
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   padding-right: 30px; }
+
+article.content {
+  padding: 150px 30px 30px; }
+  article.content h1 {
+    position: relative;
+    left: 0;
+    -webkit-transform: none;
+            transform: none;
+    padding-right: 60px;
+    margin-bottom: 60px; }
 
 @media only screen and (max-width: 1000px) {
   main::after {
