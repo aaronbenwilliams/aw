@@ -16,18 +16,34 @@
     font-style: normal;
 }
 
-$font: 'pier_sansregular';
-$font-bold: 'pier_sansbold';
+@font-face {
+    font-family: 'pier_sanslight';
+    src: url('/fonts/piersans-light.woff2') format('woff2'),
+         url('/fonts/piersans-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pier_sansmedium';
+    src: url('/fonts/piersans-medium.woff2') format('woff2'),
+         url('/fonts/piersans-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$font: 'pier_sanslight';
+$font-bold: 'pier_sansmedium';
 
 body {
   font-family: $font;
+  color: $text-default;
 }
 
 a {
   transition: 0.3s;
 
   &:hover {
-
   }
 }
 
@@ -35,9 +51,6 @@ p {
   margin: 0 auto;
   font-size: 18px;
   line-height: 30px;
-  max-width: 612px;
-  margin-bottom: 30px;
-  padding-right: 30px;
 
   a {
     background: linear-gradient(90deg, rgba(115,23,147,1) 0%, rgba(244,77,106,1) 100%);
@@ -76,4 +89,9 @@ p {
       width: 100%;
     }
   }
+}
+
+.lead-onblack {
+  font-size: 21px;
+  line-height: 30px;
 }

@@ -6,60 +6,57 @@
 
   <link rel="stylesheet" href="css/main.css" type="text/css">
   <link rel="stylesheet" href="css/flexboxgrid.min.css" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body>
 
-  <main>
-
+  <main class="intro">
     <a href="#" class="logo"><img src="img/logo-active.png" height="47" width="101" /></a>
 
     <nav>
       <ul>
-        <li><a href="about.html">About me</a></li>
-        <li><a href="process.html">My process</a></li>
-        <li><a href="studies.html">Case Studies</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
       </ul>
     </nav>
 
     <article role="main">
       <h1>Hi I’m Aaron,<br />a designer focused on Visual, UI, and UX Design. I'm currently based somewhere around Europe, working with Code Enigma.</h1>
+      <div class="social">
+        <a href="#"><span class="icon-wide icon-behance"></span></a>
+        <a href="#"><span class="icon icon-linkedin"></span></a>
+        <a href="#"><span class="icon icon-dribbble"></span></a>
+      </div>
     </article>
   </main>
 
-  <aside id="strip-middle">
-    <span>
-      <p>Almost 15 years of designing later I can fit all of my possesions into one bag and still don’t own an iron. Let me explain...</p>
-      <a href="#">About me</a>
-    </span>
-  </aside>
+  <section class="dark">
+    <article data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-duration="800">
+      <div class="inner">
+        <img src="img/aaron-bw.jpg" height="627" width="470" />
+        <div class="text">
+          <p class="lead-onblack">Almost 15 years of designing later I can fit all of my possesions into one bag and still don’t own an iron. Let me explain...</p>
+          <a href="about.html" class="btn btn-white">My story</a>
+        </div>
+      </div>
+    </article>
+  </section>
 
-  <aside id="strip-right">
-    <span>
-      <p>Last week I went to DrupalCon Amsterdam, here’s what I thought.</p>
-      <a href="#">My review</a>
-    </span>
-  </aside>
-
-  <!--<div class="row">
-    <div class="col-xs-12
-                col-sm-8
-                col-md-6
-                col-lg-4">
-        <div class="box">Responsive</div>
-    </div>
-  </div>-->
 
   <footer>
-    <ul>
-      <li><a href="#">Linkedin</a></li>
-      <li><a href="#">Dribbble</a></li>
-      <li><a href="#">Behance</a></li>
-      <li><a href="#">Twitter</a></li>
-    </ul>
     <span>&copy; Aaron Williams 2019</span>
   </footer>
 
   <script src="js/main.min.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+
+
 </body>
 </html>

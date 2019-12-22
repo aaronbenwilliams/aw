@@ -1,0 +1,21 @@
+// Button styling
+
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  background: $text-default;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-family: $font-bold;
+  display: inline-block;
+  transition: 0;
+
+  &:hover, :focus {
+    background: linear-gradient(90deg, rgba(115,23,147,1) 0%, rgba(244,77,106,1) 100%);
+  }
+}
+
+.btn-white {
+  background-color: $white;
+  color: $black;
+}

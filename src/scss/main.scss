@@ -2,76 +2,93 @@
 
 @import 'vars';
 @import 'basics';
-@import 'layout';
 @import 'typography';
 @import 'nav';
 @import 'footer';
 @import 'strips';
+@import 'lists';
+@import 'sections';
+@import 'buttons';
 
 main {
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    height: 120px;
-    z-index: 1;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 100%);
-  }
 
   .logo {
     position: absolute;
     top: 30px;
     left: 30px;
-    z-index: 2;
   }
 
-  h1 {
-    margin: 0;
+  article {
+    width: 960px;
+    margin: 0 auto;
     position: absolute;
     top: 50%;
-    font-size: 27px;
-    line-height: 40px;
-    font-family: $font-bold;
-    max-width: 612px;
-    transform: translate(0, -50%);
-    padding-right: 30px;
-    margin-left: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      max-width: 700px;
+      line-height: 41px;
+      font-family: $font-bold;
+    }
   }
-}
 
-article.content {
-  padding: 180px 30px 60px;
-
-  h1 {
+  .content {
+    max-width: 700px;
+    margin: 150px auto 0;
     position: relative;
-    transform: none;
-    margin: 0 auto 50px;
-  }
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    padding: 30px;
 
-  h2 {
-
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  main {
-    &::after {
-      height: 160px;
-      width: 160px;
-      right: 0;
+    h1 {
+      margin-bottom: 40px;
     }
 
-    .logo {
-      height: 24px;
-      width: 51px;
+    p {
+      padding-bottom: 30px;
+    }
+  }
+}
 
-      img {
-        height: 100%;
-        width: 100%;
+@media only screen and (max-width: 1020px) {
+  main {
+    article {
+      left: 30px;
+      transform: translate(0, -40%);
+      width: auto;
+      padding-right: 30px;
+
+      h1 {
+        font-size: 25px;
+        line-height: 35px;
       }
     }
   }
+}
+
+
+// Animation helpers
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+main.intro article {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+
 }

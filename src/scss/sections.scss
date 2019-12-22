@@ -1,0 +1,71 @@
+// Specific section styling
+
+main {
+  display: block;
+  background: $white;
+  height: auto;
+}
+
+main.intro {
+  height: 100vh;
+}
+
+.dark {
+  background: $black;
+  display: block;
+  padding: 10vh 0;
+  color: $white;
+  position: relative;
+
+  article {
+    width: 960px;
+    margin: 0 auto;
+    display: block;
+
+    img {
+      height: 90vh;
+      width: auto;
+      max-height: 627px;
+      text-align: right;
+    }
+
+    .inner {
+      display: inline-grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 30px;
+      align-items: center;
+
+      p {
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .dark {
+    article {
+      width: auto;
+      padding-left: 30px;
+      padding-right: 30px;
+
+      img {
+        height: auto;
+        width: 100%;
+      }
+
+      .inner {
+        display: inline-grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 30px;
+        align-items: center;
+
+        p {
+          font-size: 20px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+}
