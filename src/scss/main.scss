@@ -33,6 +33,7 @@ main {
       max-width: 700px;
       line-height: 41px;
       font-family: $font-bold;
+      font-weight: normal;
     }
   }
 
@@ -50,7 +51,15 @@ main {
     }
 
     p {
-      padding-bottom: 30px;
+      padding-bottom: 20px;
+    }
+
+    .btn {
+      margin-top: 20px;
+    }
+
+    section {
+      margin-bottom: 80px;
     }
   }
 }

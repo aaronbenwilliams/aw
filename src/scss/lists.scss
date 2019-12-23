@@ -33,3 +33,45 @@
     }
   }
 }
+
+.about-contact {
+  margin: 0;
+  padding: 0;
+
+  li {
+    line-height: 35px;
+
+    &.push {
+      padding-bottom: 20px;
+    }
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      background: linear-gradient(90deg, rgba(115,23,147,1) 0%, rgba(244,77,106,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+
+
+      &:hover {
+        background: linear-gradient(90deg, $text-default 0%, $text-default 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &.mail {
+        background: linear-gradient(90deg, $text-default 0%, $text-default 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        &:hover {
+          background: linear-gradient(90deg, rgba(115,23,147,1) 0%, rgba(244,77,106,1) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+}

@@ -9,6 +9,7 @@
   font-family: $font-bold;
   display: inline-block;
   transition: 0;
+  letter-spacing: 1px;
 
   &:hover, :focus {
     background: linear-gradient(90deg, rgba(115,23,147,1) 0%, rgba(244,77,106,1) 100%);
@@ -18,4 +19,20 @@
 .btn-white {
   background-color: $white;
   color: $black;
+}
+
+.btn-black {
+  background-color: $black;
+  color: $white;
+}
+
+.btn-black-outline {
+  background-color: $white;
+  color: $black;
+  border: 2px solid $black;
+  font-size: 13px;
+
+  &:hover {
+    color: $white;
+  }
 }
