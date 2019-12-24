@@ -36,22 +36,22 @@ gulp.task('useref', function () {
     return gulp.src('src/*.html')
         .pipe(useref())
         .pipe(gulpif('*.css', csso()))
-        .pipe(gulp.dest('docs'))
+        .pipe(gulp.dest('dist'))
 })
 
 gulp.task('fonts', function(){
    return gulp.src('src/fonts/**/*')
-         .pipe(gulp.dest('docs/fonts'))
+         .pipe(gulp.dest('dist/fonts'))
 });
 
 gulp.task('images', function(){
    return gulp.src('src/img/**/*')
-         .pipe(gulp.dest('docs/img'))
+         .pipe(gulp.dest('dist/img'))
 });
 
 gulp.task('stylesheets', function(){
    return gulp.src('src/css/**/*')
-         .pipe(gulp.dest('docs/css'))
+         .pipe(gulp.dest('dist/css'))
 });
 
 gulp.task('build', gulp.series('useref', 'fonts', 'images', 'stylesheets'));
