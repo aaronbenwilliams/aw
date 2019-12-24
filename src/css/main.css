@@ -542,6 +542,8 @@ main .is-expanded .dropdown__header::before {
       line-height: 25px; }
     .case-study .summary .intro h1 {
       line-height: 38px; }
+    .case-study .summary.summary-ctbto {
+      background: #0292b2; }
   .case-study .content {
     margin-top: 80px; }
     .case-study .content h2 {

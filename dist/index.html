@@ -15,12 +15,12 @@
 <body>
 
   <main class="intro">
-    <a href="#" class="logo"><img src="img/logo-active.png" height="47" width="101" /></a>
+    <a href="index.html" class="logo"><img src="img/logo-active.png" height="47" width="101" /></a>
 
     <nav>
       <ul>
         <li><a href="about.html">About</a></li>
-        <li><a href="work.html">Work</a></li>
+        <li><a class="overlay-switcher" id="toggle">Work</a></li>
       </ul>
     </nav>
 
@@ -33,6 +33,18 @@
       </div>
     </article>
   </main>
+
+  <!-- Fullscreen navigation -->
+  <div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+      <ul>
+        <li><a href="work-ce.html">Code Enigma</a></li>
+        <li><a href="work-ctbto.html">CTBTO - United Nations</a></li>
+        <li><a href="work-sjc.html">St John's - Cambridge University</a></li>
+        <li><a href="work-stem.html">STEM Learning</a></li>
+      </ul>
+    </nav>
+  </div>
 
   <section class="dark">
     <article data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-duration="800">
