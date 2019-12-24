@@ -113,6 +113,13 @@ hr {
   hr.push {
     margin-bottom: 90px; }
 
+.caption {
+  color: #737373;
+  font-size: 12px;
+  text-align: center;
+  display: block;
+  padding-top: 5px; }
+
 nav {
   position: absolute;
   right: 30px;
@@ -409,6 +416,27 @@ aside {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent; }
 
+.goals {
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px; }
+  .goals .odd, .goals .even {
+    display: block; }
+    .goals .odd p, .goals .even p {
+      padding-left: 12px;
+      position: relative; }
+      .goals .odd p::before, .goals .even p::before {
+        display: block;
+        position: absolute;
+        content: "";
+        height: 6px;
+        width: 10px;
+        top: 13px;
+        left: 0;
+        background: url("/img/icons/bullet.svg") no-repeat;
+        background-size: contain; }
+
 main {
   display: block;
   background: white;
@@ -483,19 +511,19 @@ main .is-expanded .dropdown__header::before {
           transform: translate(0, 0);
   position: relative; }
   .case-study .image-container {
-    width: 1200px;
+    max-width: 1200px;
     display: block;
-    margin: 0 auto; }
+    margin: 100px auto 0; }
     .case-study .image-container img {
       width: 100%; }
   .case-study .summary {
-    width: 960px;
+    max-width: 960px;
     margin: -50px auto 0;
     display: block;
     position: relative;
     background: #4932E8; }
     .case-study .summary .inner {
-      width: 700px;
+      max-width: 700px;
       margin: 0 auto;
       padding: 30px 0;
       color: white;
@@ -514,6 +542,20 @@ main .is-expanded .dropdown__header::before {
       line-height: 25px; }
     .case-study .summary .intro h1 {
       line-height: 38px; }
+  .case-study .content {
+    margin-top: 80px; }
+    .case-study .content h2 {
+      margin-bottom: 40px; }
+    .case-study .content.methods {
+      padding-top: 0;
+      padding-bottom: 100px; }
+  .case-study .image-full {
+    width: 100%;
+    padding: 80px 0 40px;
+    overflow: hidden; }
+    .case-study .image-full img {
+      max-width: 100%;
+      min-width: 1000px; }
 
 @media only screen and (max-width: 1020px) {
   .dark article {
@@ -533,7 +575,17 @@ main .is-expanded .dropdown__header::before {
       .dark article .inner p {
         font-size: 20px;
         padding-top: 20px;
-        padding-bottom: 20px; } }
+        padding-bottom: 20px; }
+  .case-study .summary .inner {
+    padding: 30px 30px; }
+    .case-study .summary .inner h1 {
+      padding-right: 30px; }
+    .case-study .summary .inner .info p {
+      font-size: 13px; } }
+
+@media only screen and (max-width: 800px) {
+  .case-study .image-full img {
+    margin-left: -100px; } }
 
 .btn {
   text-transform: uppercase;

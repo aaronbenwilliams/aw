@@ -75,3 +75,31 @@
     }
   }
 }
+
+.goals {
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+
+  .odd, .even {
+    display: block;
+
+    p {
+      padding-left: 12px;
+      position: relative;
+
+      &::before {
+        display: block;
+        position: absolute;
+        content: "";
+        height: 6px;
+        width: 10px;
+        top: 13px;
+        left: 0;
+        background: url('/img/icons/bullet.svg') no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
